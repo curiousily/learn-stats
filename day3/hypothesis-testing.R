@@ -1,0 +1,5 @@
+data <- seq(1, 20, by=1)
+test <- t.test(data, alternative="two.sided", mu=10, conf.int=0.95)
+normal <- rnorm(n=10000, m=mean(data), sd=sd(data))
+hist(normal, xlab="data")
+abline(v=c(mean(data),mean(data)))
